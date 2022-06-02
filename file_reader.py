@@ -10,3 +10,9 @@ def read_files(directory):
     Returns:
     - code_files (dict): A dictionary containing file names as keys and code contents as values.
     """
+    code_files = {}
+    
+    if not os.path.exists(directory):
+        print(f"Directory '{directory}' does not exist.")
+        return code_files
+
