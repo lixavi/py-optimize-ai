@@ -19,3 +19,7 @@ def read_files(directory):
     for file_name in os.listdir(directory):
         if file_name.endswith('.py'):
             file_path = os.path.join(directory, file_name)
+            with open(file_path, 'r') as file:
+                code_files[file_name] = file.read()
+
+    return code_files
