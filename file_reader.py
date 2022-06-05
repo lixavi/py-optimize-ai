@@ -16,3 +16,6 @@ def read_files(directory):
         print(f"Directory '{directory}' does not exist.")
         return code_files
 
+    for file_name in os.listdir(directory):
+        if file_name.endswith('.py'):
+            file_path = os.path.join(directory, file_name)
